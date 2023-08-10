@@ -1,9 +1,13 @@
-const initialArray = [5, 2, 9, 1, 5, 6];
+const initialArray = [5, 2, 9, 12, 5, 6];
 let bubbleArray = initialArray.slice();
 let shellArray = initialArray.slice();
 
 displayArray("bubble-array-container", bubbleArray.slice());
 displayArray("shell-array-container", shellArray.slice());
+
+document.addEventListener("DOMContentLoaded", function() {
+    selectTab('Home');
+});
 
 function updateSpeed(algorithm) {
     const speedInput = document.getElementById(`speed-${algorithm}`);
@@ -13,9 +17,13 @@ function updateSpeed(algorithm) {
 }
 
 function selectTab(tabId) {
-    const tabs = document.querySelectorAll(".tab");
+    const tabs = document.querySelectorAll(".section-sort");
     tabs.forEach(tab => {
-        tab.style.display = "none";
+        if (tab.id === tabId) {
+            tab.style.display = "block";
+        } else {
+            tab.style.display = "none";
+        }
     });
 
     const selectedTab = document.getElementById(tabId);
@@ -30,7 +38,7 @@ function displayArray(containerId, array) {
         const element = document.createElement("div");
         element.classList.add("array-element");
         element.textContent = value;
-        element.style.height = `${value * 10}px`; // Ajusta a altura conforme o valor
+        element.style.height = `${value}em`; // Ajusta a altura conforme o valor
         container.appendChild(element);
     });
 }
@@ -95,11 +103,11 @@ async function shellSort(array) {
     }
 }
 
-// Função para gerar um array aleatório do tamanho especificado
+// Função para gerar um array aleatório do tamanho especificado o valor 25 define o tamanho max
 function generateRandomArrayOfSize(size) {
     const randomArray = [];
     for (let i = 0; i < size; i++) {
-        randomArray.push(Math.floor(Math.random() * 20) + 1);
+        randomArray.push(Math.floor(Math.random() * 25)+1);
     }
     return randomArray;
 }

@@ -1,36 +1,10 @@
-/* Reset de estilos padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #121212;
-    color: #fff;
-}
-
-header {
-    background-color: #1DB954;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-}
-
-/* Para estilizar a seção principal */
-main {
-    background-color: #121212;
-    padding: 2rem;
-}
-
-/* Para estilizar as abas */
 .tabs-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: rem;
 }
 
-.tab {
+.tab-sort {
     padding: 0.5rem 1rem;
     background-color: #1DB954;
     color: white;
@@ -42,11 +16,10 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.tab:hover {
+.tab-sort:hover {
     background-color: #1AA34A;
 }
 
-/* Para esconder as seções que não estão ativas */
 .section {
     display: none;
 }
@@ -55,31 +28,6 @@ main {
     display: block;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-
-    padding: 0;
-}
-
-nav li {
-    margin: 0.5rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #f39c12;
-}
-
-main {
-    padding: 2rem;
-}
 
 .section {
     display: flex;
@@ -104,11 +52,11 @@ main {
 }
 
 .array-element {
-    width: 40px;
+    width: 10em;
     background-color: #0074D9;
     margin: 0 2px;
     text-align: center;
-    color: white;
+    color: black;
     transition: height 0.2s, background-color 0.2s;
 }
 
@@ -119,6 +67,7 @@ main {
 .array-element.swapped {
     background-color: #2ECC40;
 }
+
 
 button {
     margin: 0.5rem;
